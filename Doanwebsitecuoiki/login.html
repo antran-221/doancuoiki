@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style11.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <form class="form-login" id="form-loginn">
+            <h1>Đăng nhập</h1>
+            <div class="form-text">
+                <label> Username </label>
+                <input type="text" id="username">
+            </div>
+            <div class="form-text">
+                <label> Password </label>
+                <input type="Password" id="password">
+            </div>
+            <button type="button" onclick="location.href='index2.html';">Đăng nhập</button>
+            <span>Bạn chưa có tài khoản? Đăng kí</span><a href="dangki.html"> tại đây</a>
+        </form>
+    </div>
+    <script>
+        const formLogin = document.querySelectorAll('.form-text input')
+        const formLabel = document.querySelectorAll('.form-text label')
+        for(let i =0; i<2; i++){
+            formLogin[i].addEventListener("mouseover",function(){
+                formLabel[i].classList.add("focus")
+            })
+            formLogin[i].addEventListener("mouseout",function(){
+                if(formLogin[i].value == ""){
+                formLabel[i].classList.remove("focus")
+            }})
+        }
+    </script>
+</body>
+</html>
